@@ -1,3 +1,5 @@
+The Static HTML file asset gets rendered by the IC-Pluto BSR util, generating a different SVG depending on the time (last second) this can be changed to fetch real time data from any source!
+
 Most NFT's point to off-chain assets using a static route and needed to be changed in case of need, with this project the assets will be generated dynamically on the server with the logic required.
 
 I used the ic-pluto crate to create a static GET route and changed it to render an SVG according to logic, right now just the last number of the timestamp to show the concept of the project.
