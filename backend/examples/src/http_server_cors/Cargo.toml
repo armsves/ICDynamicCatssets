@@ -1,0 +1,18 @@
+[package]
+name = "http_server_cors"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+ic-cdk = { workspace = true }
+candid = { workspace = true }
+serde_json = { workspace = true }
+ic-pluto = { path = "../../../src/pluto" }
+ic-cdk-macros = "0.6.0"
+serde = "1.0.152"
+serde_bytes = "0.11.9"

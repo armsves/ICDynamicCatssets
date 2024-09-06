@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Page with Banner, Image, Name, Description, and Footer</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .banner,
+    .footer {
+      width: 100%;
+      text-align: center;
+      padding: 5px 0;
+      font-size: 1.2em;
+    }
+
+    .container {
+      width: 200px;
+      height: 300px;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .image-container {
+      width: 100%;
+      height: 50%;
+      background-color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .name,
+    .description {
+      text-align: center;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .name {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .description {
+      font-size: 1em;
+      color: #666;
+    }
+
+    .pageFooter {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      
+      padding: 5px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+
+    .pageFooter img {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    .centeredContainer {
+      display: flex;
+      align-items: center;
+      margin-right: 25px;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    @media (max-width: 767px) {
+      .hamburger {
+        display: none;
+      }
+    }
+
+    /* Styles for desktop */
+    @media (min-width: 768px) {
+      .TopBar {
+        flex-direction: row;
+        align-items: center;
+        width: 100vw;
+      }
+    }
+
+    /* We don't need to declare styles for mobile with max-width because we have started with mobile-first design */
+
+    .TopBar h1,
+    .TopBar h2,
+    .TopBar h3 {
+      font-size: 1em;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+
+      .TopBar h1,
+      .TopBar h2,
+      .TopBar h3 {
+        font-size: 1.5em;
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+    }
+
+    .TopBar p {
+      font-size: 1em;
+      color: #424242;
+    }
+
+    .TopBar .fa-icon {
+      font-size: 2em;
+    }
+
+    .TopBar .info-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .TopBar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    .profile-link {
+      flex: 1;
+      cursor: pointer;
+    }
+
+    .menu-icons {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .mobile-icons {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger h2 {
+        display: none;
+      }
+
+      .mobile-icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+      }
+
+      .menu-icons {
+        display: none;
+      }
+    }
+
+    .menu-item {
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .menu-item:hover {
+      color: blue;
+      text-decoration: underline;
+    }
+
+    .logo {
+      position: relative;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="banner">
+    <div class="TopBar">
+      <img src="./assets/banner.jpg" width="1000px" height="200px" alt="logo" />
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="image-container">
+      <img src="http://127.0.0.1:4943/?canisterId=be2us-64aaa-aaaaa-qaabq-cai" alt="Image">
+    </div>
+    <div class="name">IC Dynamic Catsets</div>
+    <div class="description">Dynamic BSR Dynamic assets</div>
+  </div>
+  <div class="footer">
+    <div class="pageFooter">
+      <div class="centeredContainer">
+        <img src="./assets/logo.jpg" width="100px" height="100px" alt="logo" />
+        <span>2024 IC Dynamic Catsets</span>
+      </div>
+
+      <div class="centeredContainer">
+        <a href="https://github.com/armsves/ICDynamicCatssets" target="_blank">
+          <img src="./assets/github.png" width="30px" height="30px" alt="GitHub logo" />
+        </a>
+      </div>
+
+      <div class="centeredContainer">
+        <a href="https://twitter.com/armsves" target="_blank">
+          <img src="./assets/twitter.png" width="30px" height="30px" alt="X/Twitter logo" />
+        </a>
+      </div>
+
+      <div class="centeredContainer">
+        <a href="https://www.linkedin.com/in/armsves" target="_blank">
+          <img src="./assets/linkedin.png" width="30px" height="30px" alt="LinkedIn logo" />
+        </a>
+      </div>
+
+      <div class="centeredContainer">
+        <span>English</span>
+        <img src="./assets/english.png" width="40px" height="20px" alt="english" />
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
